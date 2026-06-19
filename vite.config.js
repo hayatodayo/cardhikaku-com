@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/cardhikaku-com/',
+  base: process.env.VERCEL ? '/' : '/cardhikaku-com/',
   build: {
     outDir: 'docs'
   }
